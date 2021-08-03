@@ -42,6 +42,18 @@ function randomLetter() {
   return alphabet[Math.floor(Math.random() * alphabet.length)]
 }
 
+let img = document.querySelectorAll("#myImg");
+
+img.forEach(function (item) {
+  console.log(item);
+  item.addEventListener( 'click', function() {
+    item.style.width = "160%";
+    item.style.height = "auto";
+    item.style.transition = "width 0.5s ease";
+    item.style.position ="relative";
+    item.style.zIndex="1";
+  });
+});
 
 
 
