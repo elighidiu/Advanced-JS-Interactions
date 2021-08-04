@@ -125,15 +125,20 @@ poke4.addEventListener("mouseleave", () => {
   farfetchd.style.display="";
 });
 
-//CHASING
+//CHASER
 
-document.addEventListener('mousemove', function(e) {
-  let chaser = document.querySelector('.chaser');
+ let box = document.querySelector(".box");
+ let chaser = document.querySelector(".chaser");
+
+ const onMouseMove = (e) =>{
   let left = e.offsetX;
   let top = e.offsetY;
-  chaser.style.marginLeft = left + 'px';
-  chaser.style.marginTop = top + 'px';
-});
+  chaser.style.marginLeft = left + "px";
+  chaser.style.marginTop = top + "px";
+ }
+
+ box.addEventListener("mousemove", onMouseMove); 
+
 
 Array.from(document.querySelectorAll(".letter")).forEach(el => {
   el.innerText = randomLetter();
