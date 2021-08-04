@@ -125,6 +125,16 @@ poke4.addEventListener("mouseleave", () => {
   farfetchd.style.display="";
 });
 
+//CHASING
+
+document.addEventListener('mousemove', function(e) {
+  let chaser = document.querySelector('.chaser');
+  let left = e.offsetX;
+  let top = e.offsetY;
+  chaser.style.marginLeft = left + 'px';
+  chaser.style.marginTop = top + 'px';
+});
+
 Array.from(document.querySelectorAll(".letter")).forEach(el => {
   el.innerText = randomLetter();
 });
