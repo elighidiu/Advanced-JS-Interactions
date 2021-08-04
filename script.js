@@ -1,3 +1,10 @@
+//LIGHT MODE & DARK MODE
+
+const pageMode=document.querySelector(".mode");
+
+pageMode.addEventListener("click",()=>{
+    document.querySelector('body').classList.toggle('darkMode'); //Toggle between adding and removing a class name from an element with JavaScript.
+});
 
 //CAROUSEL
 var slideIndex = 0;
@@ -38,21 +45,23 @@ window.addEventListener("scroll", () => {
 let img = document.querySelectorAll("#myImg");
 
 img.forEach(function (item, index) {
- // console.log(item);
+  // console.log(item);
   item.addEventListener('click', function () {
-    img[index].classList.add('enlarged'); //Added class enlarged on click
+    img[index].classList.toggle('enlarged'); //Replaced ADD & REMOVE with TOGGLE 
 
-    let enl = document.querySelectorAll(".enlarged");
-    //console.log(enl);
-    enl.forEach(function (item, index) {
-      item.addEventListener('click', function () {
-        enl[index].classList.remove('enlarged'); // Removing class when clicked again on enlarged image
 
-      });
-    });
+    // let enl = document.querySelectorAll(".enlarged");
+    // //console.log(enl);
+    // enl.forEach(function (item, index) {
+    //   item.addEventListener('click', function () {
+    //     enl[index].classList.remove('enlarged'); // Removing class when clicked again on enlarged image
+
+    //   });
+    // });
 
   });
 });
+
 
 Array.from(document.querySelectorAll(".letter")).forEach(el => {
   el.innerText = randomLetter();
@@ -62,4 +71,3 @@ function randomLetter() {
   const alphabet = "abcdefghijklmnopqrstuvwxyz"
   return alphabet[Math.floor(Math.random() * alphabet.length)]
 }
-
