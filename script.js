@@ -74,8 +74,12 @@ magikarp= document.querySelector(".magikarp"),
 slowpoke = document.querySelector(".slowpoke"),
 farfetchd = document.querySelector(".farfetchd");
 
-poke1.addEventListener("mouseover", () => {
+poke1.addEventListener("mouseover", (e) => {
+  let x = e.offsetX,
+      y =e.offsetY-70;
   pidgeot.style.display="block";
+  pidgeot.style.left=`${x}px`;
+  pidgeot.style.top=`${y}px`;
 });
 
 poke1.addEventListener("mouseleave", () => {
@@ -83,8 +87,12 @@ poke1.addEventListener("mouseleave", () => {
 });
 
 
-poke2.addEventListener("mouseover", () => {
+poke2.addEventListener("mouseover", (e) => {
+  let x = e.offsetX,
+      y =e.offsetY-100;
   magikarp.style.display="block";
+  magikarp.style.left=`${x}px`;
+  magikarp.style.top=`${y}px`;
 });
 
 poke2.addEventListener("mouseleave", () => {
@@ -92,8 +100,12 @@ poke2.addEventListener("mouseleave", () => {
 });
 
 
-poke3.addEventListener("mouseover", () => {
+poke3.addEventListener("mouseover", (e) => {
+  let x = e.offsetX,
+      y =e.offsetY-100;
   slowpoke.style.display="block";
+  slowpoke.style.left=`${x}px`;
+  slowpoke.style.top=`${y}px`;
 });
 
 poke3.addEventListener("mouseleave", () => {
@@ -101,8 +113,12 @@ poke3.addEventListener("mouseleave", () => {
 });
 
 
-poke4.addEventListener("mouseover", () => {
+poke4.addEventListener("mouseover", (e) => {
+  let x = e.offsetX,
+      y =e.offsetY-100;
   farfetchd.style.display="block";
+  farfetchd.style.left=`${x}px`;
+  farfetchd.style.top=`${y}px`;
 });
 
 poke4.addEventListener("mouseleave", () => {

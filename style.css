@@ -94,8 +94,6 @@ div.col-12.text {
 }
 div.col-12.text img {
     width: 200px;
-    top: 150%; 
-    left: 50%;
     position: absolute;
     transform: translate(-50%, -50%);
     z-index: 1;
