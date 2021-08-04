@@ -62,6 +62,52 @@ img.forEach(function (item, index) {
   });
 });
 
+//ON HOVER SHOW POKEMON
+
+const poke1=document.querySelector(".poke1"), 
+poke2= document.querySelector(".poke2"),
+poke3 = document.querySelector(".poke3"),
+poke4 = document.querySelector(".poke4"),
+
+pidgeot=document.querySelector(".pidgeot"),
+magikarp= document.querySelector(".magikarp"),
+slowpoke = document.querySelector(".slowpoke"),
+farfetchd = document.querySelector(".farfetchd");
+
+poke1.addEventListener("mouseover", () => {
+  pidgeot.style.display="block";
+});
+
+poke1.addEventListener("mouseleave", () => {
+  pidgeot.style.display="";
+});
+
+
+poke2.addEventListener("mouseover", () => {
+  magikarp.style.display="block";
+});
+
+poke2.addEventListener("mouseleave", () => {
+  magikarp.style.display="";
+});
+
+
+poke3.addEventListener("mouseover", () => {
+  slowpoke.style.display="block";
+});
+
+poke3.addEventListener("mouseleave", () => {
+  slowpoke.style.display="";
+});
+
+
+poke4.addEventListener("mouseover", () => {
+  farfetchd.style.display="block";
+});
+
+poke4.addEventListener("mouseleave", () => {
+  farfetchd.style.display="";
+});
 
 Array.from(document.querySelectorAll(".letter")).forEach(el => {
   el.innerText = randomLetter();

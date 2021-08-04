@@ -12,7 +12,7 @@ body{
     background: midnightblue;
 }
 
-.poke{
+.poke1, .poke2, .poke3, .poke4 {
     font-weight: bold;
 }
 
@@ -87,4 +87,17 @@ body{
     transition: width 0.5s ease;
     position : relative;
     z-index: 1;
+}
+
+div.col-12.text {
+    position: relative;
+}
+div.col-12.text img {
+    width: 200px;
+    top: 150%; 
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    display: none;
 }
