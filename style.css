@@ -80,3 +80,11 @@ body{
 .mode:hover{
     cursor: pointer;
 }
+
+.enlarged {
+    width: 160%;
+    height: auto;
+    transition: width 0.5s ease;
+    position : relative;
+    z-index: 1;
+}

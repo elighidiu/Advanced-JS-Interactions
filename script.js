@@ -33,6 +33,27 @@ window.addEventListener("scroll", () => {
 
 });
 
+//ENLARGED PHOTO ON CLICK
+
+let img = document.querySelectorAll("#myImg");
+
+img.forEach(function (item, index) {
+ // console.log(item);
+  item.addEventListener('click', function () {
+    img[index].classList.add('enlarged'); //Added class enlarged on click
+
+    let enl = document.querySelectorAll(".enlarged");
+    //console.log(enl);
+    enl.forEach(function (item, index) {
+      item.addEventListener('click', function () {
+        enl[index].classList.remove('enlarged'); // Removing class when clicked again on enlarged image
+
+      });
+    });
+
+  });
+});
+
 Array.from(document.querySelectorAll(".letter")).forEach(el => {
   el.innerText = randomLetter();
 });
@@ -41,19 +62,4 @@ function randomLetter() {
   const alphabet = "abcdefghijklmnopqrstuvwxyz"
   return alphabet[Math.floor(Math.random() * alphabet.length)]
 }
-
-let img = document.querySelectorAll("#myImg");
-
-img.forEach(function (item) {
-  console.log(item);
-  item.addEventListener( 'click', function() {
-    item.style.width = "160%";
-    item.style.height = "auto";
-    item.style.transition = "width 0.5s ease";
-    item.style.position ="relative";
-    item.style.zIndex="1";
-  });
-});
-
-
 
